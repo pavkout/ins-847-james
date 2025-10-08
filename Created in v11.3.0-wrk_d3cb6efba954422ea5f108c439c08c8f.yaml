@@ -11,7 +11,7 @@ collection:
     meta:
       id: req_5be56d5725c34759884ea2a1889e2343
       created: 1759770608112
-      modified: 1759920080697
+      modified: 1759920145140
       isPrivate: false
       description: |-
         v11.3.0 Docs
@@ -34,6 +34,11 @@ collection:
         value: "true"
         id: pair_fce74cc5dc3d4058876d7b1b75a64389
         disabled: true
+      - id: pair_ecb8a876d62a4a258213b28d3ab4ce60
+        name: newheader
+        value: new
+        description: ""
+        disabled: false
     scripts:
       preRequest: ""
       afterResponse: console.log('v11.3.0')

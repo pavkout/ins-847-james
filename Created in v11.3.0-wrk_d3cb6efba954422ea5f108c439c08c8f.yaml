@@ -1,0 +1,205 @@
+type: collection.insomnia.rest/5.0
+name: Created in v11.3.0
+meta:
+  id: wrk_d3cb6efba954422ea5f108c439c08c8f
+  created: 1759918500219
+  modified: 1759918500219
+  description: ""
+collection:
+  - url: ""
+    name: Request
+    meta:
+      id: req_5be56d5725c34759884ea2a1889e2343
+      created: 1759770608112
+      modified: 1759770660667
+      isPrivate: false
+      description: ""
+      sortKey: -1759770608112
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    scripts:
+      preRequest: ""
+      afterResponse: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://github.com/godfrzero/insomnia-git-sync/security/overall-count
+    name: Github
+    meta:
+      id: req_0ca5b73ed95847648e1ad201707e87a1
+      created: 1759770725677
+      modified: 1759770772394
+      isPrivate: false
+      description: ""
+      sortKey: -1759770725677
+    method: GET
+    headers:
+      - name: accept
+        value: text/fragment+html
+      - name: accept-language
+        value: en-US,en;q=0.9
+      - name: dnt
+        value: "1"
+      - name: priority
+        value: u=1, i
+      - name: referer
+        value: https://github.com/godfrzero/insomnia-git-sync
+      - name: sec-ch-ua
+        value: '"Chromium";v="141", "Not?A_Brand";v="8"'
+      - name: sec-ch-ua-mobile
+        value: ?0
+      - name: sec-ch-ua-platform
+        value: '"macOS"'
+      - name: sec-fetch-dest
+        value: empty
+      - name: sec-fetch-mode
+        value: cors
+      - name: sec-fetch-site
+        value: same-origin
+      - name: user-agent
+        value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+      - name: x-requested-with
+        value: XMLHttpRequest
+    scripts:
+      preRequest: ""
+      afterResponse: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://example.com/api/submit
+    name: Form Body
+    meta:
+      id: req_2bee2baa00f04f8d880d653853302a33
+      created: 1759770806372
+      modified: 1759770888525
+      isPrivate: false
+      description: ""
+      sortKey: -1759770806372
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - name: name
+          value: JohnDoe
+        - name: email
+          value: johndoe@example.com
+        - name: age
+          value: "30"
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+    scripts:
+      preRequest: >
+        // Generate a UUID
+
+        function generateUUID() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+
+        // Set the headers dynamically
+
+        const now = new Date().toISOString();
+
+        const requestId = generateUUID();
+
+
+        insomnia.request.headers.add({ name: 'X-Timestamp', value: now });
+
+        insomnia.request.headers.add({ name: 'X-Request-ID', value: requestId
+        });
+      afterResponse: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://example.com/api/upload
+    name: Multipart w/ Image
+    meta:
+      id: req_15ca32b3435f47e2bd5c936e71326b8e
+      created: 1759770837684
+      modified: 1759770851446
+      isPrivate: false
+      description: ""
+      sortKey: -1759770837684
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - name: file
+          value: ""
+          fileName: /path/to/your/image.jpg
+          type: file
+        - name: description
+          value: An example image upload.
+          type: text
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+    scripts:
+      preRequest: ""
+      afterResponse: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_2d785c54f38d4f61a86e8bdf0433cfce
+    created: 1759770608111
+    modified: 1759770898510
+  cookies:
+    - id: 06b6e464-4efb-4f14-bb4f-640f8a3829ae
+      key: _gh_sess
+      value: vx5d%2BRpDOsb9xtB%2F0tNjze1JDhbMBVL5JPWfZre60eGfByqzTW5GY1J%2Fi3sFn%2Fy5V7u264AIqpveKL1aKglHhZT%2BbOKIeHdlFhBp5aRqoC%2FGX40bHcLkciCXSMkaQI8ybq7GJZpbHoX8%2BUdw1FGud2nBrR%2BRf4GMcyIPHSJ7k6GpA5BsEFj1t65xOVCzgBb69KCawZtgb5u1ErU0PND7GTf0hJAFBkuBCqgTYLktXBaAPIgg1%2Fl0IfLgV8RCisH7QfmC7IKnCp2b8I7BMQZDBQ%3D%3D--n1gUds1a94SOEacs--0p1e5fKQt01tLvwEKy4WGg%3D%3D
+      domain: github.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+    - id: b67bd97f-dd33-44c7-abd6-7da1e3dc7c30
+      key: _octo
+      value: GH1.1.1695431190.1759770764
+      domain: github.com
+      path: /
+      secure: true
+      httpOnly: false
+    - id: 5ccb9a3c-c702-4baa-bb6d-61c1fd16b445
+      key: logged_in
+      value: no
+      domain: github.com
+      path: /
+      secure: true
+      httpOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_1b1d6899513543fc82a290b35946591b
+    created: 1759770608110
+    modified: 1759770898511
+    isPrivate: false

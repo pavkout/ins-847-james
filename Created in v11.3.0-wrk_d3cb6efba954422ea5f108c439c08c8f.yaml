@@ -1,4 +1,5 @@
 type: collection.insomnia.rest/5.0
+schema_version: "5.1"
 name: Created in v11.3.0
 meta:
   id: wrk_d3cb6efba954422ea5f108c439c08c8f
@@ -19,20 +20,14 @@ collection:
     headers:
       - name: User-Agent
         value: insomnia/11.3.0
-        id: pair_3c42724da9b84a9f88a4e9030a830bae
-      - id: pair_8d25ace659764a9cbac0b4920969ea8e
-        name: test
+      - name: test
         value: tset
         description: ""
         disabled: true
-      - id: pair_a87b8d0488a348e290fe23dd0f072d39
-        name: enabled
+      - name: enabled
         value: "true"
         description: magic
         disabled: false
-    scripts:
-      preRequest: ""
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -81,9 +76,6 @@ collection:
         value: XMLHttpRequest
       - name: test
         value: "123"
-    scripts:
-      preRequest: ""
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -137,7 +129,6 @@ collection:
 
         insomnia.request.headers.add({ name: 'X-Request-ID', value: requestId
         });
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -169,9 +160,6 @@ collection:
     headers:
       - name: Content-Type
         value: multipart/form-data
-    scripts:
-      preRequest: ""
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -214,5 +202,7 @@ environments:
   meta:
     id: env_1b1d6899513543fc82a290b35946591b
     created: 1759770608110
-    modified: 1759770898511
+    modified: 1759919037964
     isPrivate: false
+  data:
+    james: gatz

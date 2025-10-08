@@ -1,4 +1,5 @@
 type: collection.insomnia.rest/5.0
+schema_version: "5.1"
 name: Created in v11.3.0
 meta:
   id: wrk_d3cb6efba954422ea5f108c439c08c8f
@@ -11,7 +12,7 @@ collection:
     meta:
       id: req_5be56d5725c34759884ea2a1889e2343
       created: 1759770608112
-      modified: 1759922280943
+      modified: 1759921542600
       isPrivate: false
       description: |-
         v11.3.0 Docs
@@ -19,30 +20,23 @@ collection:
         New stuff
 
         test
-
         43434
-
         test23
       sortKey: -1759770608112
     method: GET
     headers:
       - name: User-Agent
         value: insomnia/11.3.0
-        id: pair_650ee9ef3d9845c2b57ad0a7c86054d0
       - name: test
         value: tset
-        id: pair_59d29e2e9f5e4f2e9fef0cafff7eff98
       - name: enabled
         value: "true"
-        id: pair_fce74cc5dc3d4058876d7b1b75a64389
         disabled: true
-      - id: pair_ecb8a876d62a4a258213b28d3ab4ce60
-        name: newheader
+      - name: newheader
         value: new
         description: ""
         disabled: false
     scripts:
-      preRequest: ""
       afterResponse: console.log('v11.3.0')
     settings:
       renderRequestBody: true
@@ -148,7 +142,6 @@ collection:
 
         insomnia.request.headers.add({ name: 'X-Request-ID', value: requestId
         });
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -180,9 +173,6 @@ collection:
     headers:
       - name: Content-Type
         value: multipart/form-data
-    scripts:
-      preRequest: ""
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true

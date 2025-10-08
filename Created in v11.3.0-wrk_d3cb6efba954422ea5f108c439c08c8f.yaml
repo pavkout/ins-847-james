@@ -35,7 +35,7 @@ collection:
     meta:
       id: req_0ca5b73ed95847648e1ad201707e87a1
       created: 1759770725677
-      modified: 1759770772394
+      modified: 1759918537650
       isPrivate: false
       description: ""
       sortKey: -1759770725677
@@ -43,31 +43,49 @@ collection:
     headers:
       - name: accept
         value: text/fragment+html
+        id: pair_470aab800e1d416f87cdc22d024e3b6f
       - name: accept-language
         value: en-US,en;q=0.9
+        id: pair_4f021d7cb7b941a99a937916b263c5d4
       - name: dnt
         value: "1"
+        id: pair_2a384b7e8867411781bcf9b403cfda82
       - name: priority
         value: u=1, i
+        id: pair_49c98e9615df4a6c921675fcea2952c0
       - name: referer
         value: https://github.com/godfrzero/insomnia-git-sync
+        id: pair_2c137a4290f8481fa76f21a82620327b
       - name: sec-ch-ua
         value: '"Chromium";v="141", "Not?A_Brand";v="8"'
+        id: pair_0309a74f821c47918ce7aaa3b8b0bc3b
       - name: sec-ch-ua-mobile
         value: ?0
+        id: pair_4ffc3b8c290c4bf2bac8573ad3f71e21
       - name: sec-ch-ua-platform
         value: '"macOS"'
+        id: pair_80a09819f3634e9a9216ce28b0df827b
       - name: sec-fetch-dest
         value: empty
+        id: pair_2d965781d8974129bbc906d09e51228d
       - name: sec-fetch-mode
         value: cors
+        id: pair_3a2068ee799b419889a3da865aabf77c
       - name: sec-fetch-site
         value: same-origin
+        id: pair_4bd30db33fd44c62893d3f671eecebf4
       - name: user-agent
         value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
           (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+        id: pair_500af58c3e2f434d97c116c63b8b311e
       - name: x-requested-with
         value: XMLHttpRequest
+        id: pair_6234645fe9b44e72ac05ff6a2e44a6d2
+      - id: pair_681c148dc0a04715857195c6becc7643
+        name: test
+        value: "123"
+        description: ""
+        disabled: false
     scripts:
       preRequest: ""
       afterResponse: ""

@@ -1,0 +1,987 @@
+type: spec.insomnia.rest/5.0
+name: MCP API
+meta:
+  id: wrk_3f0902d4acf24cdb8e54bf06b53b98d3
+  created: 1759919185262
+  modified: 1759919185262
+  description: ""
+collection:
+  - name: Auth
+    meta:
+      id: fld_901a0e563ae24695bb5f03de5124cdf6
+      created: 1759919217783
+      modified: 1759919217783
+      sortKey: -1759919217783
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/auth/login"
+        name: Log in a user
+        meta:
+          id: req_00e576b5a0db4f7ab6d6daa97b345287
+          created: 1759919217786
+          modified: 1759919217786
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217786
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "email": "string",
+              "password": "string"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/auth/register"
+        name: Register a new user
+        meta:
+          id: req_aa4c051ff0b448039ed8ac7e7ef0fe5a
+          created: 1759919217786
+          modified: 1759919217786
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217786
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "string",
+              "email": "string",
+              "password": "string"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Users
+    meta:
+      id: fld_a73577c784894159b12c180c56d25f25
+      created: 1759919217783
+      modified: 1759919217783
+      sortKey: -1759919217783
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/users/{{ _.id }}"
+        name: Update user
+        meta:
+          id: req_596b5625fd144a4e983913363c0bfc79
+          created: 1759919217787
+          modified: 1759919217787
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217787
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "string",
+              "email": "string"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users"
+        name: List all users
+        meta:
+          id: req_ed05dedc351948abb049aac8652bf12e
+          created: 1759919217787
+          modified: 1759919217787
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217787
+        method: GET
+        parameters:
+          - name: page
+            disabled: true
+            value: "1"
+          - name: limit
+            disabled: true
+            value: "20"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users/{{ _.id }}"
+        name: Get user by ID
+        meta:
+          id: req_fbd86ff22f8b429f9892f82ca3b18917
+          created: 1759919217787
+          modified: 1759919217787
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217787
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Products
+    meta:
+      id: fld_b22aad5d754042e09219efcddb49d23b
+      created: 1759919217783
+      modified: 1759919217783
+      sortKey: -1759919217783
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/products"
+        name: List products
+        meta:
+          id: req_83938d85e77d4cb29765eb9a435ad1f0
+          created: 1759919217787
+          modified: 1759919217787
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217787
+        method: GET
+        parameters:
+          - name: category
+            disabled: true
+            value: string
+          - name: search
+            disabled: true
+            value: string
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products"
+        name: Create a product
+        meta:
+          id: req_30cf44e80e5c46a7864a514a0fb7f933
+          created: 1759919217788
+          modified: 1759919217788
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217788
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": "string",
+              "name": "string",
+              "description": "string",
+              "price": 0,
+              "category": "string",
+              "stock": 0
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products/{{ _.id }}"
+        name: Delete a product
+        meta:
+          id: req_8d6d8577339348b5a023152094204634
+          created: 1759919217788
+          modified: 1759919217788
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217788
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products/{{ _.id }}"
+        name: Get product details
+        meta:
+          id: req_f5fa7f383c7b4523917b8f8700de972a
+          created: 1759919217788
+          modified: 1759919217788
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217788
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Payments
+    meta:
+      id: fld_4b8f515c095f46039f7239c9a56c6cb0
+      created: 1759919217784
+      modified: 1759919217784
+      sortKey: -1759919217784
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/payments/checkout"
+        name: Create checkout session
+        meta:
+          id: req_6ffd9673430640f4be84efa23b4e0be8
+          created: 1759919217789
+          modified: 1759919217789
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217789
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "orderId": "string"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Reviews
+    meta:
+      id: fld_a1e9ac44150b40d9b7a883c17b6e7cba
+      created: 1759919217784
+      modified: 1759919217784
+      sortKey: -1759919217784
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/reviews"
+        name: Add a review
+        meta:
+          id: req_9bf1cc28a8a043af858d943060e42d5c
+          created: 1759919217789
+          modified: 1759919217789
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217789
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": "string",
+              "productId": "string",
+              "userId": "string",
+              "rating": 0,
+              "comment": "string"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/reviews"
+        name: List reviews
+        meta:
+          id: req_a94b6bcad625442b93f459c2ef641e49
+          created: 1759919217789
+          modified: 1759919217789
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217789
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Orders
+    meta:
+      id: fld_c7a3700ec00c461b8bbd2c0c9f35ed32
+      created: 1759919217784
+      modified: 1759919217784
+      sortKey: -1759919217784
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/orders"
+        name: List all orders
+        meta:
+          id: req_692d0fa9e71f4f54ae968585d15e7c1c
+          created: 1759919217788
+          modified: 1759919217788
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217788
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/orders/{{ _.id }}"
+        name: Get order details
+        meta:
+          id: req_1b5ea32d12d547c98eb77da08c3bb0d0
+          created: 1759919217789
+          modified: 1759919217789
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217789
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/orders"
+        name: Create a new order
+        meta:
+          id: req_fb1838782f4441528d84f409fb2d33f0
+          created: 1759919217789
+          modified: 1759919217789
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217789
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": "string",
+              "userId": "string",
+              "productIds": [
+                "string"
+              ],
+              "total": 0,
+              "status": "string"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Analytics
+    meta:
+      id: fld_8c0057f79aec4e86a6c3a40098ca26af
+      created: 1759919217785
+      modified: 1759919217785
+      sortKey: -1759919217785
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/analytics/sales"
+        name: Get sales data
+        meta:
+          id: req_d17d53fbc35b41fbbb1bb4680b4a719c
+          created: 1759919217790
+          modified: 1759919217790
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217790
+        method: GET
+        parameters:
+          - name: from
+            disabled: true
+            value: string
+          - name: to
+            disabled: true
+            value: string
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Notifications
+    meta:
+      id: fld_d19b27bd92b74a2ea7cbb0e67c4e5cef
+      created: 1759919217785
+      modified: 1759919217785
+      sortKey: -1759919217785
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/notifications"
+        name: Get all notifications
+        meta:
+          id: req_eee895925bf4405a90d73c3a5b7151b7
+          created: 1759919217790
+          modified: 1759919217790
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217790
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Admin
+    meta:
+      id: fld_d6db7fcc07e143b686f85e0fd93c7c20
+      created: 1759919217785
+      modified: 1759919217785
+      sortKey: -1759919217785
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/admin/stats"
+        name: Get system stats
+        meta:
+          id: req_9c4cfd385105422d9c6824bb3576936f
+          created: 1759919217790
+          modified: 1759919217790
+          isPrivate: false
+          description: ""
+          sortKey: -1759919217790
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_fdb7985581934197387a9ccbf1baf4664c5ae615
+    created: 1759919185265
+    modified: 1759919185265
+environments:
+  name: Base Environment
+  meta:
+    id: env_fdb7985581934197387a9ccbf1baf4664c5ae615
+    created: 1759919185264
+    modified: 1759919217780
+    isPrivate: false
+  data:
+    base_url: "{{ _.scheme }}://{{ _.host }}{{ _.base_path }}"
+  subEnvironments:
+    - name: OpenAPI env api.megatest.com
+      meta:
+        id: env_b73e4a88f75247248d5d48293a356841
+        created: 1759919217782
+        modified: 1759919217782
+        isPrivate: false
+        sortKey: 1759919217782
+      data:
+        scheme: https
+        base_path: /v1
+        host: api.megatest.com
+spec:
+  contents:
+    openapi: 3.0.3
+    info:
+      title: Mega Test API
+      version: 1.0.0
+      description: >
+        A large API specification for testing API clients, E2E suites, and
+        documentation tools.
+
+        Includes endpoints for authentication, users, products, orders,
+        payments, analytics, and admin.
+    servers:
+      - url: https://api.megatest.com/v1
+    tags:
+      - name: Auth
+      - name: Users
+      - name: Products
+      - name: Orders
+      - name: Payments
+      - name: Reviews
+      - name: Analytics
+      - name: Notifications
+      - name: Admin
+    paths:
+      /auth/login:
+        post:
+          tags:
+            - Auth
+          summary: Log in a user
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                    password:
+                      type: string
+                  required:
+                    - email
+                    - password
+          responses:
+            "200":
+              description: Successful login
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      token:
+                        type: string
+                      refreshToken:
+                        type: string
+            "401":
+              description: Invalid credentials
+      /auth/register:
+        post:
+          tags:
+            - Auth
+          summary: Register a new user
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    email:
+                      type: string
+                    password:
+                      type: string
+          responses:
+            "201":
+              description: User created
+            "409":
+              description: Email already exists
+      /users:
+        get:
+          tags:
+            - Users
+          summary: List all users
+          parameters:
+            - in: query
+              name: page
+              schema:
+                type: integer
+                default: 1
+            - in: query
+              name: limit
+              schema:
+                type: integer
+                default: 20
+          responses:
+            "200":
+              description: A list of users
+              content:
+                application/json:
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/User"
+      /users/{id}:
+        get:
+          tags:
+            - Users
+          summary: Get user by ID
+          parameters:
+            - in: path
+              name: id
+              required: true
+              schema:
+                type: string
+          responses:
+            "200":
+              description: User data
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/User"
+            "404":
+              description: Not found
+        put:
+          tags:
+            - Users
+          summary: Update user
+          parameters:
+            - in: path
+              name: id
+              required: true
+              schema:
+                type: string
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    email:
+                      type: string
+          responses:
+            "200":
+              description: Updated successfully
+      /products:
+        get:
+          tags:
+            - Products
+          summary: List products
+          parameters:
+            - in: query
+              name: category
+              schema:
+                type: string
+            - in: query
+              name: search
+              schema:
+                type: string
+          responses:
+            "200":
+              description: Product list
+              content:
+                application/json:
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Product"
+        post:
+          tags:
+            - Products
+          summary: Create a product
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Product"
+          responses:
+            "201":
+              description: Created
+      /products/{id}:
+        get:
+          tags:
+            - Products
+          summary: Get product details
+          parameters:
+            - in: path
+              name: id
+              required: true
+              schema:
+                type: string
+          responses:
+            "200":
+              description: Product details
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Product"
+            "404":
+              description: Not found
+        delete:
+          tags:
+            - Products
+          summary: Delete a product
+          parameters:
+            - in: path
+              name: id
+              required: true
+              schema:
+                type: string
+          responses:
+            "204":
+              description: Deleted
+      /orders:
+        get:
+          tags:
+            - Orders
+          summary: List all orders
+          responses:
+            "200":
+              description: Orders list
+              content:
+                application/json:
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Order"
+        post:
+          tags:
+            - Orders
+          summary: Create a new order
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Order"
+          responses:
+            "201":
+              description: Order created
+      /orders/{id}:
+        get:
+          tags:
+            - Orders
+          summary: Get order details
+          parameters:
+            - in: path
+              name: id
+              required: true
+              schema:
+                type: string
+          responses:
+            "200":
+              description: Order details
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Order"
+      /payments/checkout:
+        post:
+          tags:
+            - Payments
+          summary: Create checkout session
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    orderId:
+                      type: string
+          responses:
+            "200":
+              description: Payment session created
+      /reviews:
+        get:
+          tags:
+            - Reviews
+          summary: List reviews
+          responses:
+            "200":
+              description: Reviews list
+              content:
+                application/json:
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Review"
+        post:
+          tags:
+            - Reviews
+          summary: Add a review
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Review"
+          responses:
+            "201":
+              description: Review added
+      /analytics/sales:
+        get:
+          tags:
+            - Analytics
+          summary: Get sales data
+          parameters:
+            - in: query
+              name: from
+              schema:
+                type: string
+                format: date
+            - in: query
+              name: to
+              schema:
+                type: string
+                format: date
+          responses:
+            "200":
+              description: Sales report
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      totalSales:
+                        type: number
+                      totalOrders:
+                        type: integer
+                      bestSeller:
+                        type: string
+      /notifications:
+        get:
+          tags:
+            - Notifications
+          summary: Get all notifications
+          responses:
+            "200":
+              description: List of notifications
+              content:
+                application/json:
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Notification"
+      /admin/stats:
+        get:
+          tags:
+            - Admin
+          summary: Get system stats
+          responses:
+            "200":
+              description: System stats
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      users:
+                        type: integer
+                      orders:
+                        type: integer
+                      revenue:
+                        type: number
+    components:
+      schemas:
+        User:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            email:
+              type: string
+            role:
+              type: string
+              enum:
+                - user
+                - admin
+        Product:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            description:
+              type: string
+            price:
+              type: number
+            category:
+              type: string
+            stock:
+              type: integer
+        Order:
+          type: object
+          properties:
+            id:
+              type: string
+            userId:
+              type: string
+            productIds:
+              type: array
+              items:
+                type: string
+            total:
+              type: number
+            status:
+              type: string
+              enum:
+                - pending
+                - paid
+                - shipped
+                - completed
+        Review:
+          type: object
+          properties:
+            id:
+              type: string
+            productId:
+              type: string
+            userId:
+              type: string
+            rating:
+              type: integer
+              minimum: 1
+              maximum: 5
+            comment:
+              type: string
+        Notification:
+          type: object
+          properties:
+            id:
+              type: string
+            type:
+              type: string
+            message:
+              type: string
+            read:
+              type: boolean
+  meta:
+    id: spc_0c5385b3e2d9447791c44039a9668955
+    created: 1759919185264
+    modified: 1759919210508

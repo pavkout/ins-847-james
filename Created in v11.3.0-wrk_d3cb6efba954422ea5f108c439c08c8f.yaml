@@ -11,7 +11,7 @@ collection:
     meta:
       id: req_5be56d5725c34759884ea2a1889e2343
       created: 1759770608112
-      modified: 1759770660667
+      modified: 1759918859976
       isPrivate: false
       description: ""
       sortKey: -1759770608112
@@ -19,6 +19,17 @@ collection:
     headers:
       - name: User-Agent
         value: insomnia/11.3.0
+        id: pair_3c42724da9b84a9f88a4e9030a830bae
+      - id: pair_8d25ace659764a9cbac0b4920969ea8e
+        name: test
+        value: tset
+        description: ""
+        disabled: true
+      - id: pair_a87b8d0488a348e290fe23dd0f072d39
+        name: enabled
+        value: "true"
+        description: magic
+        disabled: false
     scripts:
       preRequest: ""
       afterResponse: ""

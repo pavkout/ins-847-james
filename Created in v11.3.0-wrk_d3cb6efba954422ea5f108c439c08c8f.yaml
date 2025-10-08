@@ -1,4 +1,5 @@
 type: collection.insomnia.rest/5.0
+schema_version: "5.1"
 name: Created in v11.3.0
 meta:
   id: wrk_d3cb6efba954422ea5f108c439c08c8f
@@ -23,9 +24,6 @@ collection:
         value: tset
       - name: enabled
         value: "true"
-    scripts:
-      preRequest: ""
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -39,7 +37,7 @@ collection:
     meta:
       id: req_0ca5b73ed95847648e1ad201707e87a1
       created: 1759770725677
-      modified: 1759918667355
+      modified: 1759919493887
       isPrivate: false
       description: ""
       sortKey: -1759770725677
@@ -75,8 +73,7 @@ collection:
       - name: test
         value: "123"
     scripts:
-      preRequest: ""
-      afterResponse: ""
+      preRequest: console.log("Pavlos")
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -130,7 +127,6 @@ collection:
 
         insomnia.request.headers.add({ name: 'X-Request-ID', value: requestId
         });
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -162,9 +158,6 @@ collection:
     headers:
       - name: Content-Type
         value: multipart/form-data
-    scripts:
-      preRequest: ""
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
